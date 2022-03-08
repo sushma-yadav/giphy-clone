@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Rubik', sans-serif;
+  width: 100%;
+  background: #131313;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.search {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  width: 100%;
+}
+.search_bar {
+  width: 80%;
+  height: 60px;
+  display: flex;
+  position: relative;
+  margin: 100px auto 50px auto;
+}
+.logo {
+  position: absolute;
+  top: -60px;
+}
+.heading {
+  position: absolute;
+  bottom: -35px;
+}
+.heading p {
+  color: rgba(255, 255, 255, 0.513);
+}
+.search_bar form input[type='text'] {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(110, 110, 110);
+}
+.search_bar form input[type='text']::placeholder {
+  color: rgb(189, 188, 188);
+  font-weight: 300;
+}
+.search_bar form button {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 60px;
+  border: none;
+  outline: none;
+  background: linear-gradient(
+    45deg,
+    rgb(153, 51, 255) 0%,
+    rgb(255, 102, 102) 100%
+  );
+}
+
+.gif_container {
+  margin: 0 auto;
+  max-width: 80%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.gif_container img {
+  width: 100%;
+  object-fit: contain;
+  height: 300px;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.pagination button {
+  margin: 10px;
+  padding: 20px;
+  background-color: #222;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+}
+.pagination button:hover {
+  background: linear-gradient(
+    45deg,
+    rgb(153, 51, 255) 0%,
+    rgb(255, 102, 102) 100%
+  );
+}
+@media (max-width: 1024px) {
+  .gif_container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .gif_container img {
+    height: 200px;
+  }
+  .search_bar form input[type='text'] {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gif_container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .search_bar form input[type='text'] {
+    font-size: 15px;
+  }
+  .pagination button {
+    margin: 8px;
+    padding: 10px;
+    background-color: #222;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 425px) {
+  .gif_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .search_bar form input[type='text'] {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+}

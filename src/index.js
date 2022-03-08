@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Search from './Component/Search';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <Search/>
   </React.StrictMode>,
   document.getElementById('root')
 );
